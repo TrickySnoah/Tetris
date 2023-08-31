@@ -5,9 +5,9 @@ This repository will contain the game "Tetris", a game which was not originally 
 
 <h2>Required Installations</h2>
 <p>Open the Command Prompt on your system and locate the directory, \Tetris-main\Tetris-main\Tetris.
-From there, type the following lines. Wait for each package to be installed before typing the next line.
-* pip install pygame
-* pip install keyboard
+From there, type the following lines. Wait for each package to be installed before typing the next line.<br>
+* pip install pygame<br>
+* pip install keyboard<br>
 * pip install pyautogui</p>
 
 <h2>Controls</h2>
