@@ -59,7 +59,7 @@ def tetris():
     
     #Find an image for the background
     background_image = pygame.image.load(cwd + r'\images\background.png').convert_alpha()
-    
+
     #Scale the background_image and then set the image on the window / canvas
     background_width = background_image.get_width()
     background_height = background_image.get_height()

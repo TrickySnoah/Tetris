@@ -3,6 +3,7 @@ import pygame
 from keyboard import is_pressed as k
 import keyboard
 import modules.Tetris_Board as TBd
+import math as M
 
 #===========================================================================#
 #===========================================================================#
@@ -36,16 +37,19 @@ def top_3_players(canvas, data_dict, reso_width, reso_height):
         for player in data_dict:
             all_scores.append(data_dict[player][1])
         all_scores.sort() ; all_scores.reverse()
-        
+       
     #Check to see if there are no players in the dictionary at all
     elif len(data_dict) == 0:
-        for y in range(round(reso_height/2.59), round(reso_height/1.381333333) + 1, round(reso_height/5.92)):
+        for y in range(round(reso_height/2.59), round(reso_height/1.381333333) + 1, M.floor(reso_height/5.92)):
             canvas.blit(((pygame.font.SysFont('Watermelon',round((reso_width/23.025 + reso_height/12.95)/2))).render('None',True,(0,0,0))),(round(reso_width/8.771428571),y))
         return
     
     #Loop for all of the names present
     present = 0
     for score in all_scores:
+        # check to see if there are any more players left to add
+        if (present == len(data_dict)): break
+        
         for player in data_dict:
             if score == data_dict[player][1]:
                 
@@ -68,11 +72,11 @@ def top_3_players(canvas, data_dict, reso_width, reso_height):
                 canvas.blit(((pygame.font.SysFont('Watermelon',round((reso_width/23.025 + reso_height/12.95)/2))).render(data_dict[player][0],True,(0,0,0))),(x,(round(reso_height/2.59) + round(reso_height/5.92)*present)))
                 present += 1
             if present == 3: return
-    
+            
     #Based on the length of present, draw the 'None' text(s)
     for y in reversed(range(round(reso_height/2.59), round(reso_height/1.381333333) + 1, round(reso_height/5.92))):
-        if y - (400+175*(present-1)) ==  0: return
         canvas.blit(((pygame.font.SysFont('Watermelon',round((reso_width/23.025 + reso_height/12.95)/2))).render('None',True,(0,0,0))),(round(reso_width/8.771428571),y))
+        if y == round(reso_height/2.59)+round(reso_height/5.92)*(present): return # if the y value is the same as the heighest value
         
 #===========================================================================#
 #===========================================================================#
