@@ -43,3 +43,9 @@
 =-Update 1.4.1 09/01/2023-=
 
  * Safety measures for the data file were created
+
+=-Update 1.4.2 09/01/2023-=
+
+ * More rounding errors were corrected
+ * More Forumulas were changed
+ * Spacing was corrected
