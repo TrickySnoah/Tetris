@@ -35,7 +35,10 @@ def tetris():
             if data_dict[player][1] > current_highscore: current_highscore = data_dict[player][1]
     except:
         data_dict = {}
-    
+        
+        # create the directory if it didn't exist already
+        os.mkdir(cwd + '\data')
+        
     #Initialize the pygame modules
     pygame.init()
     pygame.mixer.init() # for music

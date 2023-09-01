@@ -39,3 +39,7 @@
  * Rounding errors were corrected
  * Forumulas were changed a little
  * Spacing was changed a little
+
+=-Update 1.4.1 09/01/2023-=
+
+ * Safety measures for the data file were created
