@@ -49,3 +49,12 @@
  * More rounding errors were corrected
  * More Forumulas were changed
  * Spacing was corrected
+
+=-Update 1.4.3 09/02/2023-=
+
+ * Rounding errors, forumulas, and spacing errors were all corrected
+ * Global variables were looked at. Confusing issue with global declarations
+ * Data folder safety precautions were fixed
+ * Note taken: don't use global variables again
+ * Variable names were simplified
+ * Unecessary code was removed

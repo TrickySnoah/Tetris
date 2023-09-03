@@ -4,7 +4,6 @@ from random import randint as r
 import modules.Tetris_Shapes as TS
 
 #Global variables
-global colors_on_board, score, level, lines
 colors_on_board = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]] #20 rows in total
 score = 0
 level = 0
@@ -307,7 +306,7 @@ def update_game_information(add_lines, ts):
     global score, level, lines
     
     #Create variables for the sound play checker
-    old_level = 0 ; old_level += (lines // 10) ; increase = False
+    old_level = (lines // 10) ; increase = False
     
     #Increase the lines by the variable passed
     lines += add_lines

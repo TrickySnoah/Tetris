@@ -823,7 +823,7 @@ def keyboard_action(use_shadow, block_colors, current_time, time_ticks, clock, l
         if use_shadow: TBd.shape_shadow(locations, shapes_on_board, block_colors, canvas, reso_width, reso_height)
         
         #Draw buttons for design
-        if button1.draw(canvas, bs):pass
+        if button1.draw(canvas, bs): pass
         if button2.draw(canvas, bs): pass
         
         #Draw the other images for design too
@@ -869,13 +869,13 @@ def shape_selecter(SC):
 #===========================================================================#
 #===========================================================================#
 
-def change_block_color(block_colors):
+def change_block_color(new_block_color):
     
     #Call the global variable
     global block_color
     
     #Change the block color
-    block_color = block_colors
+    block_color = new_block_color
 
 #===========================================================================#
 #===========================================================================#
@@ -884,7 +884,7 @@ def change_block_color(block_colors):
 def get_block_color():
     
     #Call the global variable
-    global bock_color
+    global block_color
     
     #Return the block color
     return block_color

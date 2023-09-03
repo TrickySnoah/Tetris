@@ -74,9 +74,9 @@ def top_3_players(canvas, data_dict, reso_width, reso_height):
             if present == 3: return
             
     #Based on the length of present, draw the 'None' text(s)
-    for y in reversed(range(round(reso_height/2.59) + M.floor(reso_height/5.92)*present, round(reso_height/1.381333333) + 1, M.floor(reso_height/5.92))):
+    for y in reversed(range(M.floor(reso_height/2.59) + M.floor(reso_height/5.92)*(present-1), round(reso_height/1.381333333) + 1, M.floor(reso_height/5.92))):
         canvas.blit(((pygame.font.SysFont('Watermelon',round((reso_width/23.025 + reso_height/12.95)/2))).render('None',True,(0,0,0))),(round(reso_width/8.771428571),y))
-        if y == round(reso_height/1.381333333): return # if the y value is the same as the heighest value
+        if y <= M.floor(reso_height/2.59) + M.floor(reso_height/5.92)*(present): return # if the y value is the same as the lowest value
         
 #===========================================================================#
 #===========================================================================#

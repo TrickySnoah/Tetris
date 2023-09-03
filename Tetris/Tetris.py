@@ -36,8 +36,9 @@ def tetris():
     except:
         data_dict = {}
         
-        # create the directory if it didn't exist already
-        os.mkdir(cwd + '\data')
+        # create the FILE (not directory) if it didn't exist already
+        try:os.mkdir(cwd + '\data')
+        except:pass # this is for when the folder is already there
         
     #Initialize the pygame modules
     pygame.init()
